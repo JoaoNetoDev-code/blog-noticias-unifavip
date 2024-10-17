@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      header {
+        padding: 15px;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .carousel-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+      .news-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .news-content img {
+        margin-right: 20px;
+      }
+      .carousel-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <header>
+    <div style="display: flex; flex-direction: row">
+      <div style="background-color: black; border-radius: 5px">
+        <p
+          style="
+            color: white;
+            padding: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
+          "
+        >
+          News
+        </p>
+      </div>
+      <div style="background-color: transparent">
+        <p style="color: black; padding: 2px">Portal</p>
+      </div>
+    </div>
+    <section style="justify-content: center; align-items: center">
+      <a
+        style="color: black; margin-left: 5px; cursor: pointer"
+        href="/src/index.html"
+        >Home</a
+      >
+      <a
+        style="color: black; margin-left: 5px; cursor: pointer"
+        href="/src/favority.html"
+        >Favoritos</a
+      >
+      <a
+        style="color: black; margin-left: 5px; cursor: pointer"
+        href="/src/about.html"
+        >Sobre</a
+      >
+      <a
+        style="color: black; margin-left: 5px; cursor: pointer"
+        href="/src/contact.html"
+        >Contato</a
+      >
+    </section>
+  </header>
+  <body style="justify-content: center">
+    <main style="padding-left: 50px; padding-right: 50px">
+      <div class="carousel-container">
+        <h1>Hot Topics</h1>
+        <div class="carousel">
+          <div class="carousel-item">
+            <div class="news-content">
+              <img src="/src/images/Rectangle 1.svg" alt="foto" />
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quasi, voluptate quis labore ullam omnis perspiciatis, fugiat
+                  error illum, doloremque dolor qui corporis. Praesentium
+                  nostrum temporibus odit repudiandae doloremque mollitia ipsum?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="news-content">
+              <img src="/src/images/Rectangle 1.svg" alt="foto" />
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quasi, voluptate quis labore ullam omnis perspiciatis, fugiat
+                  error illum, doloremque dolor qui corporis. Praesentium
+                  nostrum temporibus odit repudiandae doloremque mollitia ipsum?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="news-content">
+              <img src="/src/images/Rectangle 1.svg" alt="foto" />
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quasi, voluptate quis labore ullam omnis perspiciatis, fugiat
+                  error illum, doloremque dolor qui corporis. Praesentium
+                  nostrum temporibus odit repudiandae doloremque mollitia ipsum?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="prevSlide()">Anterior</button>
+          <button onclick="nextSlide()">Próximo</button>
+        </div>
+      </div>
+    </main>
+    <script>
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        const slides = document.querySelectorAll(".carousel-item");
+        const totalSlides = slides.length;
+        if (index >= totalSlides) {
+          currentSlide = 0;
+        } else if (index < 0) {
+          currentSlide = totalSlides - 1;
+        } else {
+          currentSlide = index;
+        }
+        const carousel = document.querySelector(".carousel");
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
+
+      function prevSlide() {
+        showSlide(currentSlide - 1);
+      }
+    </script>
+  </body>
+</html>
