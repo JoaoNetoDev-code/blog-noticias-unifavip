@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
       header {
         padding: 15px;
@@ -43,6 +44,20 @@
         width: 100%;
         margin-top: 10px;
       }
+      .carousel-buttons button{
+        background-color: #000000;
+        color: whitesmoke;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .carousel-buttons button:hover{
+        background-color: #3b4a58;
+        transform: scale(1.02);
+      }
       .latest{
         font-family: Arial, Helvetica, sans-serif;
         margin: 20px 0;
@@ -80,11 +95,21 @@
         font-size: 12px;
         color: #666;
       }
-      footer{
-        background-color: #415468;
-        color: white;
+      .sharebuttons{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 12px;
+      }
+      .sharebuttons a{
+        text-decoration: none;
+        color: #007BFF;
+        font-size: 18px;
+      }
+      footer {
+        color: rgb(0, 0, 0);
         padding: 20px 0;
         text-align: center;
+        width: 100%;
       }
       .rodape{
         max-width: 1200px;
@@ -95,7 +120,7 @@
         font-size: 14px;
       }
     </style>
-    <title>Document</title>
+    <title>Página Inicial</title>
   </head>
   <header>
     <div style="display: flex; flex-direction: row">
@@ -117,22 +142,22 @@
     </div>
     <section style="justify-content: center; align-items: center">
       <a
-        style="color: black; margin-left: 5px; cursor: pointer"
+        style="color: black; margin-left: 5px; cursor: pointer; font-family: Arial, Helvetica, sans-serif; text-decoration: none;"
         href="/src/index.html"
         >Home</a
       >
       <a
-        style="color: black; margin-left: 5px; cursor: pointer"
+        style="color: black; margin-left: 5px; cursor: pointer; font-family: Arial, Helvetica, sans-serif; text-decoration: none;"
         href="/src/favority.html"
         >Favoritos</a
       >
       <a
-        style="color: black; margin-left: 5px; cursor: pointer"
+        style="color: black; margin-left: 5px; cursor: pointer; font-family: Arial, Helvetica, sans-serif;text-decoration: none;"
         href="/src/about.html"
         >Sobre</a
       >
       <a
-        style="color: black; margin-left: 5px; cursor: pointer"
+        style="color: black; margin-left: 5px; cursor: pointer; font-family: Arial, Helvetica, sans-serif; text-decoration: none;"
         href="/src/contact.html"
         >Contato</a
       >
@@ -141,7 +166,7 @@
   <body style="justify-content: center">
     <main style="padding-left: 50px; padding-right: 50px">
       <div class="carousel-container">
-        <h1>Hot Topics</h1>
+        <h1>Destaques</h1>
         <div class="carousel">
           <div class="carousel-item">
             <div class="news-content">
@@ -198,6 +223,11 @@
         <div class="conteudo">
           <h3>News Title</h3>
           <div class="details">5 Horas Atrás  |  SP Brasil</div>
+          <div class="sharebuttons">
+            <a href="#" onclick="share('facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="share('instagram')"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
 
@@ -206,6 +236,11 @@
         <div class="conteudo">
           <h3>News Title</h3>
           <div class="details">5 Horas Atrás  |  SP Brasil</div>
+          <div class="sharebuttons">
+            <a href="#" onclick="share('facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="share('instagram')"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
 
@@ -214,6 +249,11 @@
         <div class="conteudo">
           <h3>News Title</h3>
           <div class="details">5 Horas Atrás  |  SP Brasil</div>
+          <div class="sharebuttons">
+            <a href="#" onclick="share('facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="share('instagram')"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
 
@@ -222,6 +262,11 @@
         <div class="conteudo">
           <h3>News Title</h3>
           <div class="details">5 Horas Atrás  |  SP Brasil</div>
+          <div class="sharebuttons">
+            <a href="#" onclick="share('facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="share('instagram')"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
 
@@ -230,6 +275,11 @@
         <div class="conteudo">
           <h3>News Title</h3>
           <div class="details">5 Horas Atrás  |  SP Brasil</div>
+          <div class="sharebuttons">
+            <a href="#" onclick="share('facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="share('instagram')"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
 
@@ -238,6 +288,11 @@
         <div class="conteudo">
           <h3>News Title</h3>
           <div class="details">5 Horas Atrás  |  SP Brasil</div>
+          <div class="sharebuttons">
+            <a href="#" onclick="share('facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="share('instagram')"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
 
@@ -246,6 +301,11 @@
         <div class="conteudo">
           <h3>News Title</h3>
           <div class="details">5 Horas Atrás  |  SP Brasil</div>
+          <div class="sharebuttons">
+            <a href="#" onclick="share('facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="share('instagram')"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
 
@@ -254,18 +314,26 @@
         <div class="conteudo">
           <h3>News Title</h3>
           <div class="details">5 Horas Atrás  |  SP Brasil</div>
+          <div class="sharebuttons">
+            <a href="#" onclick="share('facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="#" onclick="share('whatsapp')"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="share('instagram')"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
 
     </div>
 
+    <!--Rodapé-->
     <footer>
       <div class="rodape">
         <p><i>Copyright 2024 News Portal</i></p>
       </div>
     </footer>
-
+    <!--Fim Rodapé-->
     <script>
+    
+
       let currentSlide = 0;
 
       function showSlide(index) {
@@ -289,6 +357,7 @@
       function prevSlide() {
         showSlide(currentSlide - 1);
       }
+
     </script>
   </body>
 </html>
